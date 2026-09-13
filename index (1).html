@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Globallink Exchange helps businesses source products, enter new markets and build reliable commercial partnerships between Australia, Asia and Africa.">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Globallink Exchange</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --ground: #FAF7F1;
+    --surface: #FFFDF9;
+    --surface-2: #F1EBE1;
+    --ink: #14273F;
+    --ink-soft: #33465E;
+    --muted: #6A7382;
+    --line: #E4DDD0;
+    --line-strong: #CFC5B2;
+    --navy: #102540;
+    --navy-deep: #0C1B31;
+    --copper: #B26E3F;
+    --copper-ink: #91541D;
+    --copper-soft: #F3E7DB;
+    --gold: #C09A52;
+    --panel-text: #F2EEE6;
+    --panel-muted: #A8B2C2;
+    --panel-line: #24384F;
+    --focus: #B26E3F;
+    --display: "Newsreader", Georgia, "Times New Roman", serif;
+    --body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono: "IBM Plex Mono", "Courier New", monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0B1626;
+      --surface: #12213A;
+      --surface-2: #182A45;
+      --ink: #EAE7DE;
+      --ink-soft: #C6C9CC;
+      --muted: #8C97A8;
+      --line: #22344D;
+      --line-strong: #33486A;
+      --navy: #0E1F37;
+      --navy-deep: #091426;
+      --copper: #D2935C;
+      --copper-ink: #DDA675;
+      --copper-soft: #2A2013;
+      --gold: #CBA663;
+      --panel-text: #F2EEE6;
+      --panel-muted: #98A5B8;
+      --panel-line: #22384F;
+      --focus: #D2935C;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0B1626;
+    --surface: #12213A;
+    --surface-2: #182A45;
+    --ink: #EAE7DE;
+    --ink-soft: #C6C9CC;
+    --muted: #8C97A8;
+    --line: #22344D;
+    --line-strong: #33486A;
+    --navy: #0E1F37;
+    --navy-deep: #091426;
+    --copper: #D2935C;
+    --copper-ink: #DDA675;
+    --copper-soft: #2A2013;
+    --gold: #CBA663;
+    --panel-text: #F2EEE6;
+    --panel-muted: #98A5B8;
+    --panel-line: #22384F;
+    --focus: #D2935C;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.65;
+    padding-inline: 20px;
+  }
+  a { color: var(--copper-ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--copper); }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
+
+  .shell { max-width: 1100px; margin-inline: auto; }
+  h1, h2, h3, h4 { font-family: var(--display); line-height: 1.14; text-wrap: balance; margin: 0; font-weight: 600; }
+  h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); letter-spacing: 0.002em; }
+  h3 { font-size: 1.35rem; }
+  p { margin: 0; }
+
+  .eyebrow {
+    font-family: var(--mono); font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--copper-ink);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--copper); }
+
+  /* ---------- nav ---------- */
+  header.site {
+    position: sticky; top: 0; z-index: 40;
+    background: color-mix(in srgb, var(--ground) 90%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    margin-inline: -20px; padding-inline: 20px;
+  }
+  .nav {
+    max-width: 1100px; margin-inline: auto;
+    display: flex; align-items: center; gap: 18px;
+    padding-block: 13px; flex-wrap: wrap;
+  }
+  .wordmark { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--ink); }
+  .wm-text { display: flex; flex-direction: column; }
+  .logo-mark {
+    width: 30px; height: 37px; flex: none;
+    background: var(--ink);
+    -webkit-mask: url("data:image/png;base64,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") no-repeat center / contain;
+    mask: url("data:image/png;base64,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") no-repeat center / contain;
+  }
+  .logo-mark.lg { width: 38px; height: 47px; }
+  .wordmark b { font-family: var(--display); font-weight: 700; font-size: 1.15rem; letter-spacing: 0.01em; }
+  .wordmark span { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.26em; color: var(--muted); }
+  .nav-links { display: flex; gap: 2px; margin-left: auto; flex-wrap: wrap; align-items: center; }
+  .nav-links a {
+    font-size: 0.84rem; font-weight: 500; color: var(--ink-soft);
+    text-decoration: none; padding: 6px 10px; border-radius: 5px;
+  }
+  .nav-links a:hover { background: var(--surface-2); color: var(--ink); }
+  .nav-cta {
+    font-size: 0.84rem; font-weight: 600; color: var(--panel-text) !important;
+    background: var(--navy); border-radius: 5px; padding: 8px 15px !important;
+    text-decoration: none; border: 1px solid var(--navy);
+  }
+  .nav-cta:hover { background: var(--navy-deep) !important; }
+
+  /* ---------- buttons ---------- */
+  .btn {
+    display: inline-block; font-weight: 600; font-size: 0.94rem;
+    padding: 13px 24px; border-radius: 5px; text-decoration: none;
+    border: 1px solid transparent; cursor: pointer; font-family: var(--body);
+    color: #fff;
+  }
+  .btn-primary { background: var(--copper); color: #fff; }
+  .btn-primary:hover { background: var(--copper-ink); color: #fff; }
+  .btn-navy { background: var(--navy); color: var(--panel-text); }
+  .btn-navy:hover { background: var(--navy-deep); color: var(--panel-text); }
+  .btn-ghost { border-color: var(--line-strong); color: var(--ink); background: transparent; }
+  .btn-ghost:hover { background: var(--surface-2); color: var(--ink); }
+  .text-link {
+    font-size: 0.88rem; font-weight: 600; color: var(--copper-ink); text-decoration: none;
+  }
+  .text-link::after { content: " →"; }
+  .text-link:hover { text-decoration: underline; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    display: grid; grid-template-columns: 1.12fr 0.88fr;
+    gap: 48px; align-items: center; padding-block: 68px 48px;
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 5.4vw, 3.9rem);
+    font-weight: 600; letter-spacing: 0.002em; margin-top: 16px;
+  }
+  .hero h1 em { font-style: italic; color: var(--copper-ink); }
+  .hero .lede { margin-top: 20px; font-size: 1.1rem; color: var(--ink-soft); max-width: 33em; }
+  .hero-ctas { display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
+  .geo-line {
+    font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.2em;
+    color: var(--muted); margin-top: 26px;
+  }
+  .geo-line b { color: var(--copper-ink); font-weight: 500; }
+  .hero-map svg { width: 100%; height: auto; display: block; }
+  .map-label { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; fill: var(--muted); }
+  .map-node-label { font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; fill: var(--ink); }
+  .map-arc { fill: none; stroke: var(--line-strong); stroke-width: 1.4; stroke-dasharray: 4 6; }
+  .map-arc.hot { stroke: var(--copper); }
+  .map-node { fill: var(--copper); }
+  .map-ring { fill: none; stroke: var(--line-strong); stroke-width: 1; }
+  .map-frame { fill: none; stroke: var(--line); stroke-width: 1; }
+
+  /* ---------- capability strip ---------- */
+  .capabilities {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-block: 1px solid var(--line);
+  }
+  .cap {
+    padding: 20px 18px; display: flex; flex-direction: column; gap: 4px;
+  }
+  .cap + .cap { border-left: 1px solid var(--line); }
+  .cap .n { font-family: var(--mono); font-size: 0.66rem; color: var(--copper-ink); letter-spacing: 0.14em; }
+  .cap b { font-family: var(--display); font-weight: 600; font-size: 1.05rem; }
+
+  /* ---------- sections ---------- */
+  section { padding-block: 64px; }
+  section + section { border-top: 1px solid var(--line); }
+  .section-head { max-width: 46em; display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
+  .section-head p { color: var(--ink-soft); }
+
+  /* ---------- service preview cards ---------- */
+  .svc-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .svc-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    padding: 26px 24px 24px; display: flex; flex-direction: column; gap: 14px;
+  }
+  .svc-card .div-code { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.18em; color: var(--muted); }
+  .svc-card h3 { font-size: 1.3rem; }
+  .svc-card .outcome { font-size: 0.92rem; color: var(--ink-soft); }
+  .svc-card ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .svc-card ul li { position: relative; padding-left: 18px; font-size: 0.88rem; color: var(--ink-soft); }
+  .svc-card ul li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 8px; height: 1.5px; background: var(--copper); }
+  .svc-card .card-links { margin-top: auto; display: flex; flex-direction: column; gap: 8px; padding-top: 8px; }
+
+  /* ---------- flagship ---------- */
+  .flagship {
+    background: var(--navy-deep); color: var(--panel-text);
+    border-radius: 14px; padding: 48px 44px;
+    display: grid; grid-template-columns: 1.02fr 0.98fr; gap: 44px;
+  }
+  .flagship .eyebrow { color: var(--gold); }
+  .flagship .eyebrow::before { background: var(--gold); }
+  .flagship h2 { color: var(--panel-text); margin-top: 14px; }
+  .flagship p.blurb { color: var(--panel-muted); margin-top: 18px; font-size: 0.98rem; max-width: 33em; }
+  .flagship .price-line {
+    font-family: var(--mono); font-size: 0.76rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold); margin-top: 22px;
+  }
+  .flagship .btn-primary { margin-top: 16px; }
+  .flagship-deliverables { margin: 0; padding: 0; list-style: none; }
+  .flagship-deliverables li {
+    display: flex; gap: 14px; align-items: baseline;
+    padding-block: 9.5px; font-size: 0.93rem;
+    border-bottom: 1px solid var(--panel-line);
+  }
+  .flagship-deliverables li:last-child { border-bottom: none; }
+  .flagship-deliverables .n { font-family: var(--mono); font-size: 0.7rem; color: var(--gold); min-width: 2ch; }
+
+  /* ---------- service detail ---------- */
+  .division { display: flex; flex-direction: column; gap: 22px; padding-block: 40px; }
+  .division + .division { border-top: 1px dashed var(--line-strong); }
+  .division-head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .division-code { font-family: var(--mono); font-weight: 600; font-size: 0.74rem; color: var(--copper-ink); letter-spacing: 0.14em; }
+  .division-head h3 { font-size: clamp(1.4rem, 2.8vw, 1.8rem); }
+  .division-sub { color: var(--ink-soft); max-width: 46em; }
+  .division-body { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: start; }
+  .service-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; margin: 0; padding: 0; list-style: none; }
+  .service-list li { position: relative; padding-left: 18px; font-size: 0.9rem; color: var(--ink-soft); }
+  .service-list li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 8px; height: 1.5px; background: var(--copper); }
+  .groupings {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+  }
+  .groupings .g-head {
+    font-family: var(--mono); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--muted); padding: 14px 20px 8px;
+  }
+  .groupings ul { margin: 0; padding: 0 0 6px; list-style: none; }
+  .groupings li {
+    display: flex; justify-content: space-between; gap: 14px; align-items: baseline;
+    padding: 10px 20px; font-size: 0.92rem; font-weight: 500;
+  }
+  .groupings li + li { border-top: 1px solid var(--line); }
+  .groupings li a { font-size: 0.78rem; font-weight: 600; white-space: nowrap; text-decoration: none; color: var(--copper-ink); }
+  .groupings li a:hover { text-decoration: underline; }
+  .groupings .g-foot { font-size: 0.8rem; color: var(--muted); padding: 10px 20px 16px; border-top: 1px dashed var(--line-strong); }
+  .service-note { font-size: 0.86rem; color: var(--muted); border-left: 2px solid var(--copper); padding-left: 14px; max-width: 40em; }
+  .categories { display: flex; flex-wrap: wrap; gap: 8px; }
+  .cat-chip { font-size: 0.78rem; font-weight: 500; color: var(--copper-ink); background: var(--copper-soft); border-radius: 5px; padding: 4px 11px; }
+
+  /* ---------- markets ---------- */
+  .corridor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .corridor-card {
+    border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
+    padding: 24px; display: flex; flex-direction: column; gap: 12px;
+  }
+  .corridor-card .tag { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  .corridor-route {
+    font-family: var(--display); font-size: 1.25rem; font-weight: 600; color: var(--ink);
+    display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  }
+  .corridor-route .arrow { color: var(--copper); font-family: var(--mono); font-size: 1rem; }
+  .corridor-card p { font-size: 0.9rem; color: var(--ink-soft); }
+  .corridor-card .codes { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; color: var(--muted); margin-top: auto; padding-top: 10px; }
+
+  /* ---------- case study ---------- */
+  .case { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 44px; align-items: start; }
+  .case blockquote {
+    margin: 24px 0 0; padding-left: 18px; border-left: 3px solid var(--copper);
+    font-family: var(--display); font-size: 1.3rem; font-weight: 500; font-style: italic;
+    line-height: 1.5; color: var(--ink); text-wrap: balance;
+  }
+  .case .sep-note { font-size: 0.84rem; color: var(--muted); margin-top: 20px; }
+  .case-steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+  .case-steps li {
+    counter-increment: step; display: flex; gap: 16px; align-items: baseline;
+    padding-block: 10px; border-bottom: 1px solid var(--line); font-size: 0.93rem; color: var(--ink-soft);
+  }
+  .case-steps li::before {
+    content: counter(step, decimal-leading-zero);
+    font-family: var(--mono); font-size: 0.7rem; font-weight: 600; color: var(--copper-ink);
+  }
+  .case-steps li:last-child { border-bottom: none; }
+
+  /* ---------- resources ---------- */
+  .res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .res-card {
+    border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  .res-cover { background: var(--navy-deep); padding: 22px 22px 18px; }
+  .res-cover svg { width: 100%; height: auto; display: block; }
+  .res-cover .cov-rule { stroke: var(--gold); stroke-width: 1; fill: none; }
+  .res-cover .cov-label { font-family: var(--mono); font-size: 7.5px; letter-spacing: 0.2em; fill: #A8B2C2; }
+  .res-cover .cov-title { font-family: var(--display); font-size: 15px; font-weight: 600; fill: #F2EEE6; }
+  .res-cover .cov-arc { fill: none; stroke: #C09A52; stroke-width: 0.8; stroke-dasharray: 2 3; opacity: 0.9; }
+  .res-body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .res-format { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .res-body h3 { font-size: 1.15rem; }
+  .res-body .outcome { font-size: 0.88rem; color: var(--ink-soft); }
+  .res-body ul { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 5px; }
+  .res-body ul li { position: relative; padding-left: 16px; font-size: 0.82rem; color: var(--muted); }
+  .res-body ul li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 7px; height: 1.5px; background: var(--copper); }
+  .res-body .card-cta { margin-top: auto; padding-top: 14px; }
+  .res-note { font-size: 0.85rem; color: var(--muted); margin-top: 26px; max-width: 52em; }
+
+  /* ---------- clients ---------- */
+  .client-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 30px; margin: 0; padding: 0; list-style: none; }
+  .client-grid li { position: relative; padding-left: 24px; font-size: 0.95rem; color: var(--ink-soft); padding-block: 4px; }
+  .client-grid li::before {
+    content: ""; position: absolute; left: 0; top: 0.8em;
+    width: 10px; height: 10px; border: 2px solid var(--copper); border-radius: 50%;
+  }
+
+  /* ---------- about ---------- */
+  .about { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 44px; align-items: start; }
+  .about-name { font-family: var(--display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; margin-top: 16px; }
+  .about-role { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--copper-ink); margin-top: 8px; }
+  .about-bio { display: flex; flex-direction: column; gap: 16px; }
+  .about-bio p { color: var(--ink-soft); font-size: 0.97rem; }
+  .strength-list { margin: 6px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+  .strength-list li { font-size: 0.8rem; font-weight: 500; color: var(--ink-soft); border: 1px solid var(--line-strong); border-radius: 999px; padding: 5px 13px; }
+
+  /* ---------- contact ---------- */
+  .contact-wrap { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 44px; align-items: start; }
+  form.enq { display: flex; flex-direction: column; gap: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 28px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-size: 0.78rem; font-weight: 600; color: var(--ink-soft); letter-spacing: 0.02em; }
+  .field input, .field select, .field textarea {
+    font-family: var(--body); font-size: 0.92rem; color: var(--ink);
+    background: var(--ground); border: 1px solid var(--line-strong); border-radius: 6px;
+    padding: 10px 12px;
+  }
+  .field textarea { resize: vertical; min-height: 110px; }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--focus); outline-offset: 1px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .enq-confirm { background: var(--copper-soft); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 10px; }
+  .enq-confirm b { font-family: var(--display); font-size: 1.2rem; font-weight: 600; }
+  .enq-confirm p { font-size: 0.92rem; color: var(--ink-soft); }
+
+  /* ---------- final cta ---------- */
+  .final-cta { text-align: center; padding-block: 74px; }
+  .final-cta h2 { font-size: clamp(2rem, 4.4vw, 3rem); }
+  .final-cta p { color: var(--ink-soft); margin-top: 16px; max-width: 36em; margin-inline: auto; }
+  .final-cta .btn { margin-top: 28px; }
+
+  /* ---------- legal ---------- */
+  .legal details {
+    border: 1px solid var(--line); border-radius: 8px; background: var(--surface);
+    padding: 0; margin-bottom: 12px;
+  }
+  .legal summary {
+    cursor: pointer; font-weight: 600; font-size: 0.94rem; padding: 15px 20px;
+    font-family: var(--display); font-size: 1.05rem;
+  }
+  .legal .legal-body { padding: 0 20px 18px; font-size: 0.87rem; color: var(--ink-soft); display: flex; flex-direction: column; gap: 10px; }
+  .advisory-note {
+    margin-top: 22px; font-size: 0.84rem; color: var(--muted);
+    border-left: 2px solid var(--copper); padding-left: 14px; max-width: 56em;
+  }
+
+  /* ---------- footer ---------- */
+  footer.site {
+    border-top: 1px solid var(--line); margin-top: 10px;
+    padding-block: 36px 48px;
+    display: flex; justify-content: space-between; gap: 28px; flex-wrap: wrap;
+    font-size: 0.82rem; color: var(--muted);
+  }
+  footer .f-brand b { font-family: var(--display); font-size: 1rem; color: var(--ink); font-weight: 600; }
+  footer .f-links { display: flex; flex-direction: column; gap: 5px; }
+  footer .f-links a { color: var(--muted); text-decoration: none; }
+  footer .f-links a:hover { color: var(--copper-ink); text-decoration: underline; }
+  footer .f-head { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; gap: 30px; padding-block: 46px 38px; }
+    .capabilities { grid-template-columns: 1fr 1fr; }
+    .cap:nth-child(3) { border-left: none; }
+    .cap:nth-child(1), .cap:nth-child(2) { border-bottom: 1px solid var(--line); }
+    .svc-cards, .corridor-grid, .res-grid { grid-template-columns: 1fr; }
+    .flagship { grid-template-columns: 1fr; padding: 32px 26px; }
+    .division-body, .case, .about, .contact-wrap { grid-template-columns: 1fr; }
+    .service-list, .client-grid { grid-template-columns: 1fr; }
+    .field-row { grid-template-columns: 1fr; }
+  }
+</style>
+
+<header class="site">
+  <nav class="nav" aria-label="Main">
+    <a class="wordmark" href="#home"><span class="logo-mark" aria-hidden="true"></span><span class="wm-text"><b>Globallink Exchange</b><span>AUSTRALIA · ASIA · AFRICA</span></span></a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#markets">Markets</a>
+      <a href="#case-study">Case Study</a>
+      <a href="#resources">Resources</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main class="shell" id="home">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-label="Introduction">
+    <div>
+      <p class="eyebrow">Cross-border growth &amp; commercial advisory</p>
+      <h1>Build across borders. <em>Grow with clarity.</em></h1>
+      <p class="lede">Globallink Exchange helps ambitious businesses find reliable suppliers, enter new markets and build the commercial systems that make growth work.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#contact">Discuss your expansion</a>
+        <a class="btn btn-ghost" href="#services">Explore our services</a>
+      </div>
+      <p class="geo-line">AUSTRALIA <b>|</b> ASIA <b>|</b> AFRICA</p>
+    </div>
+    <div class="hero-map" aria-hidden="true">
+      <svg viewBox="0 0 560 420" role="img" aria-label="Route diagram connecting Africa, Asia and Australia">
+        <rect class="map-frame" x="8" y="8" width="544" height="404" rx="10"/>
+        <path class="map-arc hot" d="M 350 96 Q 470 170 452 316"/>
+        <path class="map-arc" d="M 330 100 Q 180 130 116 252"/>
+        <path class="map-arc" d="M 436 322 Q 260 380 122 272"/>
+        <circle class="map-ring" cx="342" cy="88" r="17"/>
+        <circle class="map-node" cx="342" cy="88" r="5"/>
+        <text class="map-node-label" x="368" y="84">ASIA</text>
+        <text class="map-label" x="368" y="100">CHINA · KOREA · VIETNAM</text>
+        <circle class="map-ring" cx="110" cy="264" r="17"/>
+        <circle class="map-node" cx="110" cy="264" r="5"/>
+        <text class="map-node-label" x="88" y="300">AFRICA</text>
+        <text class="map-label" x="50" y="316">SOUTH AFRICA · BOTSWANA · NIGERIA</text>
+        <circle class="map-ring" cx="448" cy="328" r="17"/>
+        <circle class="map-node" cx="448" cy="328" r="5"/>
+        <text class="map-node-label" x="396" y="366">AUSTRALIA</text>
+        <text class="map-label" x="30" y="40">GLOBALLINK EXCHANGE PTY LTD</text>
+        <text class="map-label" x="30" y="56">PRIORITY TRADE CORRIDORS</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ CAPABILITIES ============ -->
+  <div class="capabilities" role="list" aria-label="Capabilities">
+    <div class="cap" role="listitem"><span class="n">01</span><b>Supplier intelligence</b></div>
+    <div class="cap" role="listitem"><span class="n">02</span><b>Market validation</b></div>
+    <div class="cap" role="listitem"><span class="n">03</span><b>Commercial partnerships</b></div>
+    <div class="cap" role="listitem"><span class="n">04</span><b>Operational improvement</b></div>
+  </div>
+
+  <!-- ============ SERVICES PREVIEW ============ -->
+  <section id="services" style="border-top:none">
+    <div class="section-head">
+      <p class="eyebrow">Services</p>
+      <h2>Three divisions, one commercial engine</h2>
+      <p>Whether you are sourcing product, entering a market or preparing your operations to scale, every engagement is grounded in research and carried through to practical execution.</p>
+    </div>
+    <div class="svc-cards">
+      <article class="svc-card">
+        <span class="div-code">DIVISION 01</span>
+        <h3>Globallink Sourcing</h3>
+        <p class="outcome">Find, verify and manage overseas suppliers you can build a business on — from first shortlist to ongoing production.</p>
+        <ul>
+          <li>Supplier discovery and manufacturer shortlisting</li>
+          <li>Verification and due diligence</li>
+          <li>MOQ and commercial-term negotiation</li>
+          <li>Landed-cost and margin analysis</li>
+        </ul>
+        <div class="card-links">
+          <a class="text-link" href="#sourcing">View the service</a>
+          <a class="text-link" href="#contact">Request a consultation</a>
+        </div>
+      </article>
+      <article class="svc-card">
+        <span class="div-code">DIVISION 02</span>
+        <h3>Globallink Market Entry</h3>
+        <p class="outcome">Decide whether — and exactly how — to enter your next market, with validated demand and partners you can trust.</p>
+        <ul>
+          <li>Market validation and opportunity assessment</li>
+          <li>Distributor and commercial-partner search</li>
+          <li>Go-to-market and channel strategy</li>
+          <li>In-market representation</li>
+        </ul>
+        <div class="card-links">
+          <a class="text-link" href="#market-entry">View the service</a>
+          <a class="text-link" href="#contact">Request a consultation</a>
+        </div>
+      </article>
+      <article class="svc-card">
+        <span class="div-code">DIVISION 03</span>
+        <h3>Globallink Business Improvement</h3>
+        <p class="outcome">Strengthen the operations, processes and commercial systems your growth will depend on.</p>
+        <ul>
+          <li>Business diagnostic and gap analysis</li>
+          <li>Process-improvement sprints</li>
+          <li>Commercial-readiness review</li>
+          <li>Ninety-day transformation programs</li>
+        </ul>
+        <div class="card-links">
+          <a class="text-link" href="#improvement">View the service</a>
+          <a class="text-link" href="#contact">Request a consultation</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ FLAGSHIP ============ -->
+  <section id="blueprint">
+    <div class="flagship">
+      <div>
+        <p class="eyebrow">Flagship engagement</p>
+        <h2>Global Market &amp; Sourcing Blueprint</h2>
+        <p class="blurb">A structured engagement for founders and SMEs that need to validate a product, supplier base or new market before making a larger commitment. One program that answers what to sell, where to sell it, who to buy it from — and exactly what to do in the next ninety days.</p>
+        <p class="price-line">Pricing available on request</p>
+        <a class="btn btn-primary" href="#contact">Request a proposal</a>
+      </div>
+      <ol class="flagship-deliverables">
+        <li><span class="n">01</span> Initial strategy workshop</li>
+        <li><span class="n">02</span> Product and target-market assessment</li>
+        <li><span class="n">03</span> Competitor and pricing review</li>
+        <li><span class="n">04</span> Qualified supplier or commercial-partner prospects</li>
+        <li><span class="n">05</span> Landed-cost and margin model</li>
+        <li><span class="n">06</span> Risk and compliance considerations</li>
+        <li><span class="n">07</span> Recommended sales and distribution channels</li>
+        <li><span class="n">08</span> Ninety-day execution plan</li>
+        <li><span class="n">09</span> Final presentation and consultation</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES DETAIL ============ -->
+  <section id="services-detail" aria-label="Services in detail">
+    <div class="section-head">
+      <p class="eyebrow">Services in detail</p>
+      <h2>What each division delivers</h2>
+    </div>
+
+    <!-- Division 1 -->
+    <article class="division" id="sourcing">
+      <div class="division-head">
+        <span class="division-code">DIVISION 01</span>
+        <h3>Globallink Sourcing</h3>
+      </div>
+      <p class="division-sub">Support for businesses finding, evaluating and managing overseas suppliers — across China, South Korea, Vietnam and Australia — so every order stands on verified partners and clear commercial terms.</p>
+      <div class="division-body">
+        <div style="display:flex; flex-direction:column; gap:18px">
+          <ul class="service-list">
+            <li>Product and supplier research</li>
+            <li>Manufacturer shortlisting</li>
+            <li>Supplier verification and due diligence</li>
+            <li>MOQ and commercial-term negotiation</li>
+            <li>Sample coordination</li>
+            <li>Factory and wholesale-market visits</li>
+            <li>Product specification development</li>
+            <li>Packaging and private-label coordination</li>
+            <li>Landed-cost and margin analysis</li>
+            <li>Shipping and logistics coordination</li>
+            <li>Ongoing supplier relationship management</li>
+          </ul>
+          <p class="service-note">Focused, credible experience — our initial sectors, not a claim to every industry:</p>
+          <div class="categories">
+            <span class="cat-chip">Beauty &amp; personal care</span>
+            <span class="cat-chip">Korean skincare</span>
+            <span class="cat-chip">Hair products &amp; beauty devices</span>
+            <span class="cat-chip">Consumer &amp; travel products</span>
+            <span class="cat-chip">Selected agrifood</span>
+          </div>
+        </div>
+        <div class="groupings">
+          <p class="g-head">Ways to engage</p>
+          <ul>
+            <li>Sourcing consultation <a href="#contact">Discuss this service</a></li>
+            <li>Supplier discovery <a href="#contact">Request a quote</a></li>
+            <li>Supplier verification <a href="#contact">Request a quote</a></li>
+            <li>Managed sourcing project <a href="#contact">Request a quote</a></li>
+            <li>End-to-end product launch support <a href="#contact">Request a quote</a></li>
+            <li>Ongoing sourcing representation <a href="#contact">Discuss this service</a></li>
+          </ul>
+          <p class="g-foot">Every engagement is scoped to your product and volumes. Pricing available on request.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Division 2 -->
+    <article class="division" id="market-entry">
+      <div class="division-head">
+        <span class="division-code">DIVISION 02</span>
+        <h3>Globallink Market Entry</h3>
+      </div>
+      <p class="division-sub">Support for businesses assessing and entering a new geographic market — grounded in working knowledge of Australia, South Africa, Botswana, Nigeria and East Asia.</p>
+      <div class="division-body">
+        <div style="display:flex; flex-direction:column; gap:18px">
+          <ul class="service-list">
+            <li>Market opportunity assessment</li>
+            <li>Competitor and pricing analysis</li>
+            <li>Customer and channel identification</li>
+            <li>Distributor and wholesale-partner searches</li>
+            <li>Marketplace-entry planning</li>
+            <li>Local logistics and fulfilment assessment</li>
+            <li>Commercial risk analysis</li>
+            <li>Go-to-market strategy</li>
+            <li>Partner introductions</li>
+            <li>Trade-mission and meeting coordination</li>
+            <li>In-market representation</li>
+            <li>Ninety-day launch planning</li>
+          </ul>
+          <p class="service-note">We concentrate on three priority trade corridors — see <a href="#markets">Markets</a> for where we operate.</p>
+        </div>
+        <div class="groupings">
+          <p class="g-head">Ways to engage</p>
+          <ul>
+            <li>Market-entry consultation <a href="#contact">Discuss this service</a></li>
+            <li>Market validation report <a href="#contact">Request a quote</a></li>
+            <li>Distributor search <a href="#contact">Request a quote</a></li>
+            <li>Market-entry blueprint <a href="#contact">Request a quote</a></li>
+            <li>In-market representation <a href="#contact">Discuss this service</a></li>
+            <li>Complete expansion project <a href="#contact">Request a quote</a></li>
+          </ul>
+          <p class="g-foot">Scoped to your target market and channel strategy. Pricing available on request.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Division 3 -->
+    <article class="division" id="improvement">
+      <div class="division-head">
+        <span class="division-code">DIVISION 03</span>
+        <h3>Globallink Business Improvement</h3>
+      </div>
+      <p class="division-sub">Business-facing transformation that strengthens the systems required for growth — where commercial operations, customer experience, stakeholder alignment and implementation meet.</p>
+      <div class="division-body">
+        <div style="display:flex; flex-direction:column; gap:18px">
+          <ul class="service-list">
+            <li>Business-process mapping</li>
+            <li>Commercial-readiness assessment</li>
+            <li>Operational gap analysis</li>
+            <li>Customer-journey review</li>
+            <li>Supplier and distribution process improvement</li>
+            <li>KPI development</li>
+            <li>Risk and compliance documentation</li>
+            <li>Requirements gathering</li>
+            <li>Stakeholder workshops</li>
+            <li>Technology and workflow recommendations</li>
+            <li>Ninety-day improvement program</li>
+          </ul>
+          <p class="service-note">We prepare businesses operationally and commercially for growth — practical implementation, not technical IT consulting.</p>
+        </div>
+        <div class="groupings">
+          <p class="g-head">Ways to engage</p>
+          <ul>
+            <li>Business diagnostic <a href="#contact">Request a quote</a></li>
+            <li>Process-improvement sprint <a href="#contact">Request a quote</a></li>
+            <li>Commercial-readiness review <a href="#contact">Request a quote</a></li>
+            <li>Ninety-day transformation <a href="#contact">Request a quote</a></li>
+            <li>Fractional growth advisory <a href="#contact">Discuss this service</a></li>
+          </ul>
+          <p class="g-foot">Scoped after an initial conversation about your operations. Pricing available on request.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ MARKETS ============ -->
+  <section id="markets">
+    <div class="section-head">
+      <p class="eyebrow">Markets</p>
+      <h2>Three priority trade corridors</h2>
+      <p>We go deep on a focused set of routes across Australia, China, South Korea, Vietnam, South Africa, Botswana and Nigeria — rather than shallow everywhere.</p>
+    </div>
+    <div class="corridor-grid">
+      <article class="corridor-card">
+        <span class="tag">Corridor 01</span>
+        <span class="corridor-route">Asia <span class="arrow">→</span> Australia</span>
+        <p>Korean beauty, Vietnamese hair, beauty devices, private-label products and selected consumer goods entering the Australian market.</p>
+        <span class="codes">CHINA · SOUTH KOREA · VIETNAM → AUSTRALIA</span>
+      </article>
+      <article class="corridor-card">
+        <span class="tag">Corridor 02</span>
+        <span class="corridor-route">Asia <span class="arrow">→</span> Southern Africa</span>
+        <p>Korean and Chinese consumer products entering South Africa and Botswana through reliable distribution partners.</p>
+        <span class="codes">CHINA · SOUTH KOREA → SOUTH AFRICA · BOTSWANA</span>
+      </article>
+      <article class="corridor-card">
+        <span class="tag">Corridor 03</span>
+        <span class="corridor-route">Australia <span class="arrow">→</span> Africa</span>
+        <p>Australian agrifood, technology and selected professional services entering Southern Africa and Nigeria.</p>
+        <span class="codes">AUSTRALIA → SOUTH AFRICA · BOTSWANA · NIGERIA</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ WHO WE WORK WITH ============ -->
+  <section id="clients">
+    <div class="section-head">
+      <p class="eyebrow">Who we work with</p>
+      <h2>Built for decision-makers, ready to move</h2>
+      <p>We work best with established businesses that have a defined product, market or expansion objective — and are ready to evaluate or implement a commercial opportunity.</p>
+    </div>
+    <ul class="client-grid">
+      <li>Australian SMEs looking for reliable suppliers in Asia</li>
+      <li>African distributors seeking Asian or Australian products</li>
+      <li>Asian brands seeking entry into Australia or Southern Africa</li>
+      <li>Beauty and consumer-product founders developing private-label products</li>
+      <li>Manufacturers seeking distributors or commercial partners</li>
+      <li>Diaspora-led businesses trading between Australia, Asia and Africa</li>
+      <li>SMEs preparing their operations for expansion</li>
+    </ul>
+  </section>
+
+  <!-- ============ CASE STUDY ============ -->
+  <section id="case-study">
+    <div class="case">
+      <div>
+        <p class="eyebrow">Case study</p>
+        <h2>KACHBEAUTY: strategy, implemented</h2>
+        <p style="color:var(--ink-soft); margin-top:16px">KACHBEAUTY is an independent consumer beauty brand whose development gave our team direct, practical experience across the corridors we now advise on — from sourcing in Korea to selling in Australia and South Africa.</p>
+        <blockquote>“Our approach is informed by first-hand experience building and expanding consumer brands across Australia, Asia and Southern Africa.”</blockquote>
+        <p class="sep-note">KACHBEAUTY operates separately from Globallink Exchange. This case study reflects experience gained, not a client engagement.</p>
+      </div>
+      <ol class="case-steps">
+        <li>Identifying market demand</li>
+        <li>Sourcing Korean products</li>
+        <li>Evaluating suppliers</li>
+        <li>Developing product bundles</li>
+        <li>Selecting fulfilment partners</li>
+        <li>Planning entry into Australia and South Africa</li>
+        <li>Managing cross-border logistics</li>
+        <li>Building retail and marketplace channels</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ RESOURCES ============ -->
+  <section id="resources">
+    <div class="section-head">
+      <p class="eyebrow">Resources</p>
+      <h2>Practical tools for cross-border operators</h2>
+      <p>Digital products built from the same frameworks we use in client engagements — for teams that want to run the process themselves.</p>
+    </div>
+    <div class="res-grid">
+      <article class="res-card">
+        <div class="res-cover" aria-hidden="true">
+          <svg viewBox="0 0 240 130">
+            <rect class="cov-rule" x="6" y="6" width="228" height="118" rx="4"/>
+            <path class="cov-arc" d="M 30 100 Q 120 20 210 90"/>
+            <text class="cov-label" x="20" y="28">GLOBALLINK RESOURCES</text>
+            <text class="cov-title" x="20" y="62">Asia Product</text>
+            <text class="cov-title" x="20" y="80">Sourcing Playbook</text>
+            <text class="cov-label" x="20" y="110">FIELD GUIDE · 01</text>
+          </svg>
+        </div>
+        <div class="res-body">
+          <span class="res-format">PDF guide</span>
+          <h3>Asia Product Sourcing Playbook</h3>
+          <p class="outcome">Run a structured sourcing process — from first research to a verified supplier and a confident first order.</p>
+          <ul>
+            <li>Supplier research and shortlisting workflow</li>
+            <li>Verification and red-flag checklist</li>
+            <li>Negotiation preparation framework</li>
+            <li>Sample and quality-control steps</li>
+          </ul>
+          <div class="card-cta"><a class="text-link" href="#contact">View product</a></div>
+        </div>
+      </article>
+      <article class="res-card">
+        <div class="res-cover" aria-hidden="true">
+          <svg viewBox="0 0 240 130">
+            <rect class="cov-rule" x="6" y="6" width="228" height="118" rx="4"/>
+            <path class="cov-arc" d="M 30 40 Q 120 110 210 35"/>
+            <text class="cov-label" x="20" y="28">GLOBALLINK RESOURCES</text>
+            <text class="cov-title" x="20" y="62">Market Entry</text>
+            <text class="cov-title" x="20" y="80">Blueprint</text>
+            <text class="cov-label" x="20" y="110">TEMPLATE SET · 02</text>
+          </svg>
+        </div>
+        <div class="res-body">
+          <span class="res-format">PDF + editable worksheets</span>
+          <h3>Market Entry Blueprint</h3>
+          <p class="outcome">Plan a market entry end to end — validation, channels, pricing and the first ninety days.</p>
+          <ul>
+            <li>Market validation framework</li>
+            <li>Channel and distributor selection guide</li>
+            <li>Pricing and positioning worksheet</li>
+            <li>Ninety-day launch plan template</li>
+          </ul>
+          <div class="card-cta"><a class="text-link" href="#contact">View product</a></div>
+        </div>
+      </article>
+      <article class="res-card">
+        <div class="res-cover" aria-hidden="true">
+          <svg viewBox="0 0 240 130">
+            <rect class="cov-rule" x="6" y="6" width="228" height="118" rx="4"/>
+            <path class="cov-arc" d="M 30 95 L 80 70 L 130 85 L 180 45 L 210 55"/>
+            <text class="cov-label" x="20" y="28">GLOBALLINK RESOURCES</text>
+            <text class="cov-title" x="20" y="62">Cross-Border</text>
+            <text class="cov-title" x="20" y="80">Profit Calculator</text>
+            <text class="cov-label" x="20" y="110">SPREADSHEET · 03</text>
+          </svg>
+        </div>
+        <div class="res-body">
+          <span class="res-format">Excel spreadsheet</span>
+          <h3>Cross-Border Profit Calculator</h3>
+          <p class="outcome">Know your landed cost and true margin before you place an order — not after.</p>
+          <ul>
+            <li>Freight, duty and fee inputs</li>
+            <li>Landed-cost model per unit</li>
+            <li>Margin scenarios by channel</li>
+            <li>MOQ break-even analysis</li>
+          </ul>
+          <div class="card-cta"><a class="text-link" href="#contact">View product</a></div>
+        </div>
+      </article>
+      <article class="res-card">
+        <div class="res-cover" aria-hidden="true">
+          <svg viewBox="0 0 240 130">
+            <rect class="cov-rule" x="6" y="6" width="228" height="118" rx="4"/>
+            <path class="cov-arc" d="M 195 30 l 6 6 l 12 -14" stroke-dasharray="none"/>
+            <path class="cov-arc" d="M 195 55 l 6 6 l 12 -14" stroke-dasharray="none"/>
+            <path class="cov-arc" d="M 195 80 l 6 6 l 12 -14" stroke-dasharray="none"/>
+            <text class="cov-label" x="20" y="28">GLOBALLINK RESOURCES</text>
+            <text class="cov-title" x="20" y="62">Supplier Due</text>
+            <text class="cov-title" x="20" y="80">Diligence Checklist</text>
+            <text class="cov-label" x="20" y="110">CHECKLIST · 04</text>
+          </svg>
+        </div>
+        <div class="res-body">
+          <span class="res-format">PDF checklist</span>
+          <h3>Supplier Due Diligence Checklist</h3>
+          <p class="outcome">Assess any supplier before money moves — the checks that separate reliable partners from expensive mistakes.</p>
+          <ul>
+            <li>Business and registration checks</li>
+            <li>Capability and capacity assessment</li>
+            <li>Red-flag indicators</li>
+            <li>Supplier scorecard</li>
+          </ul>
+          <div class="card-cta"><a class="text-link" href="#contact">View product</a></div>
+        </div>
+      </article>
+      <article class="res-card">
+        <div class="res-cover" aria-hidden="true">
+          <svg viewBox="0 0 240 130">
+            <rect class="cov-rule" x="6" y="6" width="228" height="118" rx="4"/>
+            <rect class="cov-arc" x="175" y="35" width="12" height="55" stroke-dasharray="none"/>
+            <rect class="cov-arc" x="192" y="50" width="12" height="40" stroke-dasharray="none"/>
+            <rect class="cov-arc" x="209" y="25" width="12" height="65" stroke-dasharray="none"/>
+            <text class="cov-label" x="20" y="28">GLOBALLINK RESOURCES</text>
+            <text class="cov-title" x="20" y="62">Distributor</text>
+            <text class="cov-title" x="20" y="80">Evaluation Scorecard</text>
+            <text class="cov-label" x="20" y="110">SCORECARD · 05</text>
+          </svg>
+        </div>
+        <div class="res-body">
+          <span class="res-format">Excel scorecard</span>
+          <h3>Distributor Evaluation Scorecard</h3>
+          <p class="outcome">Compare distributor candidates objectively and choose the partner who will actually move your product.</p>
+          <ul>
+            <li>Market-coverage criteria</li>
+            <li>Weighted scoring model</li>
+            <li>Side-by-side comparison sheet</li>
+            <li>Decision summary</li>
+          </ul>
+          <div class="card-cta"><a class="text-link" href="#contact">View product</a></div>
+        </div>
+      </article>
+    </div>
+    <p class="res-note">To purchase a resource or ask which one fits your situation, use the enquiry form and select “Digital products” — we will send access details directly. Online checkout is coming soon.</p>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="about">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Relationship-led. Execution-focused.</h2>
+        <p class="about-name">Kachi Eluigwe</p>
+        <p class="about-role">Founder and Principal — International Growth and Market Entry</p>
+      </div>
+      <div class="about-bio">
+        <p>Kachi brings more than fifteen years of experience across government, healthcare, technology, marketing and international business — a career spent where commercial opportunity, operations and relationships meet.</p>
+        <p>His work with Globallink Exchange draws on first-hand experience operating across Australia, Asia and Africa: assessing opportunities, developing business, negotiating commercial terms and carrying cross-border initiatives from research through to implementation.</p>
+        <p>The approach is practical and relationship-led. Every engagement is built on direct conversations with the suppliers, distributors and partners involved — because sustainable cross-border growth is built on people who trust each other to deliver.</p>
+        <ul class="strength-list" aria-label="Core strengths">
+          <li>Opportunity assessment</li>
+          <li>Business development</li>
+          <li>Stakeholder engagement</li>
+          <li>Negotiation</li>
+          <li>Process improvement</li>
+          <li>Cross-border initiatives</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final-cta" aria-label="Call to action">
+    <h2>Where are you trying to grow?</h2>
+    <p>Tell us about the product, market or operational challenge. We will recommend the most practical next step.</p>
+    <a class="btn btn-primary" href="#contact">Start a conversation</a>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="contact-wrap">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Tell us about your project</h2>
+        <p style="color:var(--ink-soft); margin-top:16px">Share what you know so far — product, target market, timeline. We respond to every enquiry with a clear recommendation, usually within two business days.</p>
+      </div>
+      <form class="enq" id="enquiry-form">
+        <div class="field-row">
+          <div class="field">
+            <label for="enq-name">Full name</label>
+            <input id="enq-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="enq-company">Company name</label>
+            <input id="enq-company" name="company" type="text" autocomplete="organization" required>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="enq-email">Business email</label>
+            <input id="enq-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="enq-country">Country</label>
+            <input id="enq-country" name="country" type="text" autocomplete="country-name" required>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="enq-service">Service of interest</label>
+            <select id="enq-service" name="service">
+              <option>Global sourcing</option>
+              <option>Market entry</option>
+              <option>Business improvement</option>
+              <option>Commercial partnership</option>
+              <option>Digital products</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="enq-target">Target market</label>
+            <select id="enq-target" name="target">
+              <option>Australia</option>
+              <option>South Africa</option>
+              <option>Botswana</option>
+              <option>Nigeria</option>
+              <option>China</option>
+              <option>South Korea</option>
+              <option>Vietnam</option>
+              <option>Multiple / other</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="enq-industry">Product or industry</label>
+            <input id="enq-industry" name="industry" type="text" placeholder="e.g. Korean skincare, agrifood">
+          </div>
+          <div class="field">
+            <label for="enq-stage">Project stage</label>
+            <select id="enq-stage" name="stage">
+              <option>Researching options</option>
+              <option>Validating a product or market</option>
+              <option>Ready to implement</option>
+              <option>Already operating and scaling</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="enq-message">Brief description of the challenge</label>
+          <textarea id="enq-message" name="message" required></textarea>
+        </div>
+        <div class="field">
+          <label for="enq-contact-method">Preferred contact method</label>
+          <select id="enq-contact-method" name="contactMethod">
+            <option>Email</option>
+            <option>Phone call</option>
+            <option>Video call</option>
+          </select>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="enq-website">Leave this field empty</label>
+          <input id="enq-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <button class="btn btn-primary" type="submit" id="enq-submit">Send enquiry</button>
+      </form>
+      <div class="enq-confirm" id="enq-confirm" hidden>
+        <b>Thank you — your enquiry has been received.</b>
+        <p id="enq-confirm-text">We aim to respond within two business days with a clear recommendation on your next step.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEGAL ============ -->
+  <section id="legal" class="legal">
+    <div class="section-head">
+      <p class="eyebrow">Trust &amp; compliance</p>
+      <h2>The fine print, plainly</h2>
+    </div>
+    <details id="privacy">
+      <summary>Privacy Policy</summary>
+      <div class="legal-body">
+        <p>Globallink Exchange Pty Ltd collects only the information you provide through this website's enquiry form — your name, company, contact details and a description of your project. We use it solely to respond to your enquiry and, where you engage us, to deliver the services you request.</p>
+        <p>We do not sell, rent or trade your personal information. Information is shared with third parties only where required to deliver an agreed service or where required by law. You may request access to, correction of, or deletion of your information at any time by contacting us through the enquiry form.</p>
+      </div>
+    </details>
+    <details id="terms">
+      <summary>Terms of Use</summary>
+      <div class="legal-body">
+        <p>This website is provided by Globallink Exchange Pty Ltd for general information about our services. Content may be updated at any time without notice. Submitting an enquiry does not create a client relationship; engagements commence only under a signed agreement that sets out scope, deliverables and fees.</p>
+        <p>All content on this site, including text, frameworks and resource descriptions, remains the property of Globallink Exchange Pty Ltd and may not be reproduced for commercial purposes without permission.</p>
+      </div>
+    </details>
+    <details id="disclaimer">
+      <summary>Disclaimer</summary>
+      <div class="legal-body">
+        <p>Globallink Exchange provides commercial advisory and project support. Information on this website is general in nature and does not constitute legal, customs, tax, financial or regulatory advice. Decisions in those areas may require appropriately qualified specialists, and we recommend engaging them where applicable.</p>
+        <p>References to markets, sectors and corridors describe our areas of focus and experience; they are not guarantees of specific commercial outcomes.</p>
+      </div>
+    </details>
+    <p class="advisory-note">Globallink Exchange provides commercial advisory and project support. Legal, customs, tax and regulatory decisions may require appropriately qualified specialists.</p>
+  </section>
+
+</main>
+
+<footer class="site shell">
+  <div class="f-brand">
+    <span class="logo-mark lg" aria-hidden="true" style="margin-bottom:10px; display:block"></span>
+    <b>Globallink Exchange Pty Ltd</b><br>
+    Cross-border growth and commercial advisory<br>
+    Australia · Asia · Africa<br><br>
+    © 2026 Globallink Exchange Pty Ltd. All rights reserved.
+  </div>
+  <div class="f-links">
+    <span class="f-head">Company</span>
+    <a href="#services">Services</a>
+    <a href="#markets">Markets</a>
+    <a href="#case-study">Case Study</a>
+    <a href="#resources">Resources</a>
+    <a href="#about">About</a>
+  </div>
+  <div class="f-links">
+    <span class="f-head">Trust</span>
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#terms">Terms of Use</a>
+    <a href="#disclaimer">Disclaimer</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var form = document.getElementById("enquiry-form");
+    var confirmBox = document.getElementById("enq-confirm");
+    var confirmText = document.getElementById("enq-confirm-text");
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      // Basic spam protection: honeypot field must remain empty.
+      if (document.getElementById("enq-website").value !== "") return;
+      var name = document.getElementById("enq-name").value.trim();
+      var service = document.getElementById("enq-service").value;
+      confirmText.textContent = (name ? name + ", thank you" : "Thank you") +
+        " — we have received your enquiry about " + service.toLowerCase() +
+        " and aim to respond within two business days with a clear recommendation.";
+      form.hidden = true;
+      confirmBox.hidden = false;
+      confirmBox.scrollIntoView({ block: "nearest" });
+    });
+    // Open the relevant legal section when a footer link is used.
+    ["privacy", "terms", "disclaimer"].forEach(function (id) {
+      document.querySelectorAll('a[href="#' + id + '"]').forEach(function (link) {
+        link.addEventListener("click", function () {
+          var d = document.getElementById(id);
+          if (d) d.open = true;
+        });
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
